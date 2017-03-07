@@ -118,7 +118,7 @@ impl Window {
                     image.roi(&image_intersect).blend(&window_close.roi(&image_intersect.offset(-image_rect.left(), -image_rect.top())));
                 }
             }
-            x = max(self.x + 6, self.x + self.width() - 18)-7*2-14*1.5;
+            x = max(self.x + 6, self.x + self.width() - 18)-7-7-14-7;
             if x + 18 <= self.x + self.width() {
                 let image_rect = Rect::new(x, title_rect.top() + 7, window_minimize.width(), window_minimize.height());
                 let image_intersect = rect.intersection(&image_rect);

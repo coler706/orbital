@@ -263,7 +263,7 @@ impl OrbitalScheme {
                             &mut self.window_close
                         } else {
                             &mut self.window_close_unfocused
-                        },self.window_minimize);
+                        },&mut self.window_minimize);
                         window.draw(&mut self.image, &rect);
                     }
                 }
