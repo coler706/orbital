@@ -7,6 +7,7 @@ pub struct Config {
     pub cursor: String,
     pub window_close: String,
     pub window_close_unfocused: String,
+     pub window_minimize: String,
 }
 
 impl Config {
@@ -31,6 +32,7 @@ impl Config {
             cursor: String::new(),
             window_close: String::new(),
             window_close_unfocused: String::new(),
+            window_minimize: String::new(),
         };
 
         for line_original in string.lines() {
