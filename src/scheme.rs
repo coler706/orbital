@@ -162,6 +162,7 @@ pub struct OrbitalScheme {
     background_i: usize,
     window_close: Image,
     window_close_unfocused: Image,
+    window_minimize: Image,
     cursor: Image,
     cursor_x: i32,
     cursor_y: i32,
@@ -191,6 +192,7 @@ impl OrbitalScheme {
             background_i: 0,
             window_close: Image::from_path(&config.window_close).unwrap_or(Image::new(0, 0)),
             window_close_unfocused: Image::from_path(&config.window_close_unfocused).unwrap_or(Image::new(0, 0)),
+            window_minimize: Image::from_path(&config.window_minimize).unwrap_or(Image::new(0, 0)),
             cursor: Image::from_path(&config.cursor).unwrap_or(Image::new(0, 0)),
             cursor_x: 0,
             cursor_y: 0,
@@ -261,7 +263,7 @@ impl OrbitalScheme {
                             &mut self.window_close
                         } else {
                             &mut self.window_close_unfocused
-                        });
+                        },self.window_minimize);
                         window.draw(&mut self.image, &rect);
                     }
                 }
