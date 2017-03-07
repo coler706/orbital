@@ -51,7 +51,7 @@ impl Config {
                 config.window_close_unfocused = line[23..].to_string();
             }
             if line.starts_with("window_minimize=") {
-                config.window_close = line[13..].to_string();
+                config.window_minimize = line[16..].to_string();
             }
         }
 
